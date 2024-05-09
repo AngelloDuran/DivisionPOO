@@ -1,3 +1,4 @@
+
 // se importa la libreria Scanner
 import java.util.Scanner;
 
@@ -8,7 +9,6 @@ public class MainDivision {
         // se llama al metodo Scanner
         Scanner n1 = new Scanner(System.in);
         // se ingresa el mensaje que se le dara al usuario
-        Division d1 = new Division();
         System.out.println("Ingresa un numero");
         // se almacena el valor del usuario
         int a = n1.nextInt();
@@ -16,14 +16,19 @@ public class MainDivision {
         System.out.println("Ingrese el segundo numero");
         // se almacena el valor del usuario
         int b = n1.nextInt();
-        // se hace la operacion con los datos ingresados por el usuario
-        int r = a / b;
         // se imprime el resultado de la operacion y se muestra en pantalla
-        d1.a=a;
-        d1.b=b;
+        Division d1 = new Division();
+        d1.setA(a);
+        ;
+        d1.setB(b);
+        ;
         d1.dividir(a, b);
-        System.out.println("el resultado es :"+ d1.dividir(a, b));
-
+        d1.getA();
+        d1.getB();
+        d1.getR();
+        System.out.println("el resultado es :" + d1.dividir(a, b));
+        System.out.println(d1.toString());
+        System.out.println(n1.toString());
         // se cierra el metodo mian
     }
     // se cierra clase
